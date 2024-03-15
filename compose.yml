@@ -1,0 +1,12 @@
+services:
+  vite:
+    build: 
+      context: .
+    volumes:
+      - ./package.json:/usr/src/app/package.json
+      - ./package-lock.json:/usr/src/app/package-lock.json
+      - ./src:/usr/src/app/src
+      - ./index.html:/usr/src/app/index.html
+      - ./public:/usr/src/app/public
+    ports:
+      - 5173:5173
